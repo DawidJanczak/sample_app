@@ -25,6 +25,8 @@ end
 
 gem 'jquery-rails', '2.0.0'
 
+gem 'haml', '3.1.6'
+
 group :test do
   gem 'capybara', '1.1.2'
 end
