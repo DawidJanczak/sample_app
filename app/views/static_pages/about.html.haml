@@ -1,7 +1,8 @@
+-provide(:title, "About Us")
 !!!
 %html
   %head
-    %title Ruby on Rails Tutorial Sample App | About Us
+    %title Ruby on Rails Tutorial Sample App | #{yield :title}
   %body
     %h1 About Us
     %p
