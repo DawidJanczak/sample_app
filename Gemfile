@@ -33,6 +33,8 @@ group :test do
   gem 'capybara', '1.1.2'
   gem 'rb-inotify', '0.8.8'
   gem 'libnotify', '0.5.9'
+  gem 'spork', '0.9.0'
+  gem 'guard-spork', '1.1.0'
 end
 
 # To use ActiveModel has_secure_password
