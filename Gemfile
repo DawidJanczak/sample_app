@@ -9,6 +9,7 @@ gem 'pg', '0.12.2'
 
 group :development, :test do
   gem 'rspec-rails', '2.10.0'
+  gem 'guard-rspec', '0.5.5'
 end
 
 
@@ -30,6 +31,8 @@ gem 'haml', '3.1.6'
 
 group :test do
   gem 'capybara', '1.1.2'
+  gem 'rb-inotify', '0.8.8'
+  gem 'libnotify', '0.5.9'
 end
 
 # To use ActiveModel has_secure_password
