@@ -29,6 +29,8 @@ gem 'jquery-rails', '2.0.0'
 
 gem 'haml', '3.1.6'
 
+gem 'pry-rails', '0.1.6'
+
 group :test do
   gem 'capybara', '1.1.2'
   gem 'rb-inotify', '0.8.8'
