@@ -87,8 +87,8 @@ describe User do
     it { should_not be_valid }
   end
 
-  descibe "when password is too short" do
-    before { @user.password = @user.passowrd_confirmation = "a" * 5 }
+  describe "when password is too short" do
+    before { @user.password = @user.password_confirmation = "a" * 5 }
     it { should be_invalid }
   end
 
