@@ -29,8 +29,8 @@ describe "Authentication" do
       let(:user) { FactoryGirl.create(:user) }
       
       before do
-        fill_in "Email",    "user@example.com"
-        fill_in "Password", "foobar"
+        fill_in "Email",    with: "user@example.com"
+        fill_in "Password", with: "foobar"
         click_button "Sign in"
       end
 
