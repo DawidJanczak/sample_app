@@ -61,7 +61,11 @@ class UsersController < ApplicationController
   end
 
   def admin_user
-    redirect_to(root_path) unless current_user.admin?
+    if current_user.admin?
+      redirect_to(root_path) if User.find(params[:id]).admin?
+    else
+      redirect_to(root_path)
+    end
   end
 
   def signed_in_user
