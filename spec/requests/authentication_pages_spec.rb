@@ -41,6 +41,16 @@ describe "Authentication" do
 
       it { should_not have_link("Sign in", href: signin_path) }
 
+      describe "and trying to signup again" do
+        before { visit signup_path }
+        it { should_not have_selector("h1", text: "Sign up") }
+      end
+
+      describe "submitting a create request to User controller" do
+        before { post "/users" }
+        specify { response.should redirect_to(root_path) }
+      end
+
       describe "followed by signout" do
         before { click_link "Sign out" }
         it { should have_link("Sign in") }
