@@ -135,6 +135,13 @@ describe "Authentication" do
         before { put user_path(wrong_user) }
         specify { response.should redirect_to(root_path) }
       end
+
+      describe "submitting a DELETE request to another user's micropost" do
+        let(:wrong_micropost) { FactoryGirl.create(:micropost, user: wrong_user) }
+        before { delete micropost_path(wrong_micropost) }
+
+        specify { response.should redirect_to(root_path) }
+      end
     end
 
     describe "as a non-admin user" do
