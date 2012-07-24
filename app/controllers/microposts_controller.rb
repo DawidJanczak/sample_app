@@ -1,4 +1,6 @@
 class MicropostsController < ApplicationController
+  include MicropostHelper
+
   before_filter :unsigned_user, only: [:create, :destroy]
   before_filter :correct_user,   only: :destroy
 
